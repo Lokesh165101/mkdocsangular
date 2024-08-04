@@ -1,0 +1,7 @@
+site_name: Lokesh angular documentation 
+nav:
+ - Home: index.md
+ - About: about.md
+ - hello: hello.md
+theme:
+  name: material
