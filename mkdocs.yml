@@ -1,7 +1,13 @@
 site_name: Lokesh angular documentation 
 nav:
  - Home: index.md
- - About: about.md
- - hello: hello.md
+ - basics topics in angular : Basics.md
+ - java script string methods : stringmethods.md
+ - java script Array methods : Arraymethods.md
+ - java script object methods : objectmethods.md
+ - single and 2 way Binding : dataBinding.md
+ - input and output binding : input$output.md
+ - Directives : directives.md
+
 theme:
   name: material
