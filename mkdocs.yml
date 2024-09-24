@@ -1,13 +1,16 @@
 site_name: Lokesh angular documentation 
 nav:
  - Home: index.md
- - basics topics in angular : Basics.md
- - java script string methods : stringmethods.md
- - java script Array methods : Arraymethods.md
- - java script object methods : objectmethods.md
- - single and 2 way Binding : dataBinding.md
- - input and output binding : input$output.md
+ - Basics Topics In Angular : Basics.md
+ - Java Script String Methods : stringmethods.md
+ - Java Script Array Methods : Arraymethods.md
+ - Java Script Object Methods : objectmethods.md
+ - Single and 2 way Binding : dataBinding.md
+ - Input And Output Binding : input$output.md
+ - Ngconent&Ngtemplate&Ngcontainer&Viewencapsulation : ngconent&ngtemplate&ngcontainer&viewencapsulation.md
  - Directives : directives.md
+ - Pipes&Custompipes : pipes.md
+ - Customdirectives : customdirectives.md
 
 theme:
   name: material
