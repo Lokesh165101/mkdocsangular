@@ -4,7 +4,7 @@ nav:
  - Basics Topics In Angular : Basics.md
  - Java Script String Methods : stringmethods.md
  - Java Script Array Methods : Arraymethods.md
- - Java Script Object Methods : objectmethods.md
+ - Java Script Object Methods : JavascriptObjects.md
  - Single and 2 way Binding : dataBinding.md
  - Input And Output Binding : input$output.md
  - Ngconent&Ngtemplate&Ngcontainer&Viewencapsulation : ngconent&ngtemplate&ngcontainer&viewencapsulation.md
