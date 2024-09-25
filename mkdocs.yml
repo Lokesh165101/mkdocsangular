@@ -9,8 +9,15 @@ nav:
  - Input And Output Binding : input$output.md
  - Ngconent&Ngtemplate&Ngcontainer&Viewencapsulation : ngconent&ngtemplate&ngcontainer&viewencapsulation.md
  - Directives : directives.md
- - Pipes&Custompipes : pipes.md
  - Customdirectives : customdirectives.md
+ - Pipes&Custompipes : pipes.md
+ - TemplateDrivenForms : TemplateDrivenForms.md
+ - Validation : validation.md
+ - ReactiveForms : ReactiveForms.md
+ - FokeJoint : FokeJoint.md
+ - Singals : Singals.md
+ - CreatShortcutkeysinangular : CreatShortcutkeysinangular.md
+ - FormsArray : FormsArray.md
 
 theme:
   name: material
