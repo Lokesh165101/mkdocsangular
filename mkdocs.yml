@@ -1,30 +1,51 @@
 site_name: Lokesh angular documentation 
 nav:
- - Home: index.md
- - Basics Topics In Angular : Basics.md
- - Java Script String Methods : stringmethods.md
- - Java Script Array Methods : Arraymethods.md
- - Java Script Object Methods : JavascriptObjects.md
- - Single and 2 way Binding : dataBinding.md
- - Input And Output Binding : input$output.md
- - Ngconent&Ngtemplate&Ngcontainer: ngconent&ngtemplate&ngcontainer.md
- - Viewencapsulation : viewencapsulation.md
- - viewchild&viewchildren : viewchild&viewchildren.md
- - Directives : directives.md
- - Customdirectives : customdirectives.md
- - Pipes : pipes.md
- - Custompipes : Custompipes.md
- - TemplateDrivenForms : TemplateDrivenForms.md
- - ReactiveForms : ReactiveForms.md
- - Customvalidation : Customvalidation.md
- - FormsArray : FormsArray.md
- - FokeJoint : FokeJoint.md
- - Singals : Singals.md
- - BehaviourSubject : BehaviourSubject.md
- - Localstorage : Localstorage.md
- - NGXS_Store : NGXS_store.md
- - Services : Services.md
- - CreatShortcutkeysinangular : CreatShortcutkeysinangular.md
+  - Home: index.md
+  - Angular:
+    - 'Basics Topics In Angular' : 'Basics.md'
+    - 'Java Script String Methods' : 'stringmethods.md'
+    - Java Script Array Methods : Arraymethods.md
+    - Java Script Object Methods : JavascriptObjects.md
+    - Single and 2 way Binding : dataBinding.md
+    - Input And Output Binding : input$output.md
+    - Ngconent&Ngtemplate&Ngcontainer: ngconent&ngtemplate&ngcontainer.md
+    - Viewencapsulation : viewencapsulation.md
+    - viewchild&viewchildren : viewchild&viewchildren.md
+    - Directives : directives.md
+    - Customdirectives : customdirectives.md
+    - Pipes : pipes.md
+    - Custompipes : Custompipes.md
+    - TemplateDrivenForms : TemplateDrivenForms.md
+    - ReactiveForms : ReactiveForms.md
+    - Customvalidation : Customvalidation.md
+    - FormsArray : FormsArray.md
+    - FokeJoint : FokeJoint.md
+    - Singals : Singals.md
+    - BehaviourSubject : BehaviourSubject.md
+    - Localstorage : Localstorage.md
+    - NGXS_Store : NGXS_store.md
+    - Services : Services.md
+    - CreatShortcutkeysinangular : CreatShortcutkeysinangular.md
 
 theme:
   name: material
+  palette:
+    # Palette toggle for light mode
+    - scheme: default
+      toggle:
+        icon: material/brightness-7 
+        name: Switch to dark mode
+      primary: teal
+      accent: purple
+
+    # Palette toggle for dark mode
+    - scheme: slate
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+      primary: teal
+      accent: lime
+  features:
+    - navigation.tabs
+    # - navigation.tabs.sticky
+    - navigation.top
