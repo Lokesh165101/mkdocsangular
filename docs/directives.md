@@ -1,0 +1,163 @@
+```
+• Introduction
+• ngIf
+• Hidden Property
+• ngSwitchCase
+• ngFor
+• ngFor and Change Detection
+• ngFor and Trackby
+• The Leading Asterisk
+• ngClass
+• ngStyle
+• Safe Traversal Operator
+• Creating Custom Directives
+```
+
+## ngIf
+```
+<div *ngIf="condition">
+  This content will only be visible if 'condition' is true.
+</div>
+(condition is to be decleared in the ts it should be in boolen condition)
+```
+
+```
+<div *ngIf="condition; else elseBlock">
+  This content is visible if 'condition' is true.
+</div>
+<ng-template #elseBlock>
+  This content is visible if 'condition' is false.
+</ng-template>
+```
+
+## Hidden property 
+```
+<div [hidden]="isHidden">
+  This content is hidden when 'isHidden' is true.
+</div>
+<button (click)="isHidden = !isHidden">Toggle Visibility</button>
+```					
+## ngSwitchCase
+In Angular, the ngSwitch directive allows you to conditionally display elements based on the value of an expression.
+It works similarly to a switch-case statement in programming languages.
+ 
+ngSwitch: Directive to define the switch expression.
+ngSwitchCase: Specifies the value to match for a particular case.
+ngSwitchDefault: Provides a default case when no other cases match.																																										
+
+```
+<div [ngSwitch]="status">
+  <div *ngSwitchCase="'active'">The status is Active.</div>
+  <div *ngSwitchCase="'inactive'">The status is Inactive.</div>
+  <div *ngSwitchCase="'pending'">The status is Pending.</div>
+  <div *ngSwitchDefault>The status is unknown.</div>
+</div>
+```
+### switch case ts file 
+```
+updateFontSize(size: number) {
+  const root = document.documentElement;
+  let fontDefaultName = '';
+
+  switch (size) {
+    case 10:
+      fontDefaultName = '--font-default-xsmall';
+      break;
+    case 17:
+      fontDefaultName = '--font-default-small';
+      break;
+    case 13:
+      fontDefaultName = '--font-default-lg';
+      break;
+    case 14:
+      fontDefaultName = '--font-default-xl';
+      break;
+    case 15:
+      fontDefaultName = '--font-default-xxl';
+      break;
+    case 17:
+      fontDefaultName = '--font-default-xxxl';
+      break;
+    default:
+      fontDefaultName = '--font-default-small'; // Default case
+  }
+
+  root.style.setProperty(fontDefaultName, `${size}px`);
+
+}
+```
+## ngFor
+ng for is used to rotate a loop 
+
+here items= [a,b,c,d,e,f] this is an array 
+
+
+
+
+```
+<div *ngFor="let item of items">
+  {{ item }}
+</div>
+
+output = [a,b,c,d,e,f]
+```
+### passing the index in the ngfor while rotating the loop 
+
+```
+<ul>
+  <li *ngFor="let item of items; let i = index">
+    {{ i }} - {{ item }}
+  </li>
+</ul>
+```
+
+### Tracking Items with trackBy
+
+When working with large lists or when items change frequently, 
+you can improve performance by using trackBy to help Angular identify and track items efficiently.
+
+### @if which is used in the html code
+
+```
+@if (a > b) {
+  {{a}} is greater than {{b}}
+} @else if (b > a) {
+  {{a}} is less than {{b}}
+} @else {
+  {{a}} is equal to {{b}}
+}
+```
+
+## ngfor latest in the angular 18 in the html code 
+
+```
+html
+
+<div *ngFor = "let title of fetchData">
+  {{title.title}} -- {{title.description}} -- {{title.tagline}} {{title.date}}
+</div>
+
+ts
+
+fetchData = [{"title":"saurabh","description":"dd","tagline":"tt","date":"dd"}];
+ 
+```
+
+### rules to write a veriable in angular
+```
+let userName: string = 'John Doe';
+let age: number = 25;
+
+firstsmall letter and next word capital letter 
+
+array 
+fruits -- fistletter small 
+
+obj firstletter small and remaining capital letter 
+let objName = {
+  key1: value1,
+  key2: value2,
+  ...
+};
+```
+

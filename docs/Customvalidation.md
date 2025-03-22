@@ -1,4 +1,46 @@
 
+# custom validation  
+
+## app.html
+```
+<label>firstname </label>
+<input 
+type="text"
+placeholder="firstname"
+formControlName="firstname"
+><br>
+<div class="red" *ngIf="form.get('firstname')?.touched && form.get('firstname')?.errors?.['required']">
+  First name is required.
+</div>
+
+<!-- <div class="red" *ngIf="form.get('firstname')?.errors?.['minlength']">
+  Firstname must be at least 3 characters long.
+</div> -->
+<small *ngIf="form.get('firstname')?.hasError('uppercase')">
+  Firstname must contain at least one uppercase letter.
+</small>
+```
+
+app.ts 
+
+```
+this.form=this.fb.group({
+  firstname:new FormControl('',[Validators.required,Validators.minLength(5),this.uppercaseValidator]),
+  lastname:new FormControl('',[Validators.required,Validators.maxLength(6)]),
+})
+
+
+
+   uppercaseValidator(control: AbstractControl): { [key: string]: any } | null {
+    const value = control.value || '';
+    const hasUppercase = /[A-Z]/.test(value);
+    return hasUppercase ? null : { uppercase: true };
+  }
+```
+
+
+
+
 ## validation 
 
 ```

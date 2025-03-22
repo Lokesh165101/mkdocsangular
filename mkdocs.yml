@@ -7,17 +7,24 @@ nav:
  - Java Script Object Methods : JavascriptObjects.md
  - Single and 2 way Binding : dataBinding.md
  - Input And Output Binding : input$output.md
- - Ngconent&Ngtemplate&Ngcontainer&Viewencapsulation : ngconent&ngtemplate&ngcontainer&viewencapsulation.md
+ - Ngconent&Ngtemplate&Ngcontainer: ngconent&ngtemplate&ngcontainer.md
+ - Viewencapsulation : viewencapsulation.md
+ - viewchild&viewchildren : viewchild&viewchildren.md
  - Directives : directives.md
  - Customdirectives : customdirectives.md
- - Pipes&Custompipes : pipes.md
+ - Pipes : pipes.md
+ - Custompipes : Custompipes.md
  - TemplateDrivenForms : TemplateDrivenForms.md
- - Validation : validation.md
  - ReactiveForms : ReactiveForms.md
+ - Customvalidation : Customvalidation.md
+ - FormsArray : FormsArray.md
  - FokeJoint : FokeJoint.md
  - Singals : Singals.md
+ - BehaviourSubject : BehaviourSubject.md
+ - Localstorage : Localstorage.md
+ - NGXS_Store : NGXS_store.md
+ - Services : Services.md
  - CreatShortcutkeysinangular : CreatShortcutkeysinangular.md
- - FormsArray : FormsArray.md
 
 theme:
   name: material

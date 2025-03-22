@@ -1,5 +1,72 @@
 input decorator (parent to child relationship )
 
+
+
+```
+
+Input decorator and ngonchnges
+
+@input parent to child 
+
+parent ts 
+i am having a data in the parent component i want send to the child 
+
+array=[1,2,3,4] this is oresent in the parent component 
+
+or
+
+formsubmitbutton(){
+this.array=[...this.array,this.form.value](here we are pushing the formdata to that array)  
+}
+
+parent html --
+
+<app-child [array]="array"></app-child>(the selector of the child componenet )
+
+chid ts -
+
+@Input array:any( here the data comes in that array from the paremt )
+
+we can use it in any way 
+
+child html 
+<p>child works!</p>
+@for(item of array ;track item ){  (track is used for the performance)
+  
+  <li>{{item.firstname}}</li>
+}
+@empty{ (if the data is not present )
+  <li>there is no data </li>
+}
+
+
+why we need to use ngOnChanges
+
+- the data is send from parent to child intitally when the component is loded 
+only the initial data will come 
+
+but when we need updated data of that array when the form is submitted 
+so the updated data is triggered in that ngOnchnages
+
+
+ngOnChanges(changes: SimpleChanges): void {
+  // Object.keys(changes).forEach(key => this[key] = changes[key].currentValue);
+
+if(changes['array']?.currentValue){
+  let obj = changes['array']?.currentValue
+  console.log(obj,'datadata')
+
+}
+
+
+}
+
+
+```
+
+
+
+
 parent compnent 
 
 ```
