@@ -25,6 +25,10 @@ nav:
     - Localstorage : Localstorage.md
     - NGXS_Store : NGXS_store.md
     - Services : Services.md
+    - AppConfig : appConfig.md
+    - Routes : Routes.md
+    - interceptor : interceptor.md
+    - ComponentStructure : ComponentStructure.md
     - CreatShortcutkeysinangular : CreatShortcutkeysinangular.md
 
 theme:

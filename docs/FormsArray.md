@@ -81,3 +81,157 @@ import { HelloComponent } from './hello.component';
 export class AppModule { }
 
 ```
+
+
+
+```
+
+
+# form array 
+
+
+app.html code -- firts we need to write the formgroup, formarrayName,formgroupname in that controlers
+
+
+
+<form [formGroup]="formArray" class="custom-form" (ngSubmit)="onSubmit()">
+  <h4 class="form-title">User Information</h4>
+
+  <div formArrayName="userDetails" *ngFor="let user of userDetails.controls; let i = index">
+    <div [formGroupName]="i" class="form-group">
+
+      <!-- Firstname -->
+      <label for="firstname">First Name</label>
+      <input type="text" formControlName="firstname" placeholder="Enter first name">
+
+      <!-- Lastname -->
+      <label for="lastname">Last Name</label>
+      <input type="text" formControlName="lastname" placeholder="Enter last name">
+
+      <!-- Gender -->
+      <label>Gender</label>
+      <div class="radio-group">
+        <label for="genderMale">
+          <input type="radio" formControlName="gender" value="Male" id="genderMale"> Male
+        </label>
+        <label for="genderFemale">
+          <input type="radio" formControlName="gender" value="Female" id="genderFemale"> Female
+        </label>
+      </div>
+
+      <!-- Message -->
+      <label for="textme">Message</label>
+      <textarea formControlName="textme" placeholder="Enter your message" rows="5"></textarea>
+
+      <!-- Preferences -->
+      <label>Preferences</label>
+      <div class="checkbox-group">
+        <label for="checkYes">
+          <input type="checkbox" formControlName="yes" id="checkYes"> Yes
+        </label>
+        <label for="checkNo">
+          <input type="checkbox" formControlName="no" id="checkNo"> No
+        </label>
+      </div>
+
+      <!-- Remove Button for this form group -->
+      <button type="button" (click)="removeUser(i)">Remove</button>
+    </div>
+  </div>
+
+  <button type="button" (click)="addUser()">Add User</button>
+  <button type="submit" class="submit-btn">Submit</button>
+</form>
+
+
+app.ts 
+
+---- 
+
+after completing the form array in the html 
+
+step 1 - 
+
+ngOnInit(): void {
+  this.formarray()
+  }
+  
+  formarray(){
+  this.formArray = this.fb.group({
+    userDetails: this.fb.array([this.createUser()])
+  });
+}(formarray is the group ) it is creating intially -- by using this method (this.creatUser())
+
+
+createUser(): FormGroup {
+  return this.fb.group({
+    firstname: [''],
+    lastname: [''],
+    gender: [''],
+    textme: [''],
+    yes: [false],
+    no: [false],
+  });
+}
+
+step 2 - add button 
+
+get userDetails() {
+  return (this.formArray.get('userDetails') as FormArray);
+} 
+
+adding the controllers 
+
+addUser(){
+  this.userDetails.push(this.createUser());
+}
+
+this.creatUser is added sucessfully and used 
+
+remove form array 
+removeUser(index: number) {
+this.userDetails.removeAt(index);
+}
+
+step 3 post --
+
+    this.userDetails.controls.forEach(control => {
+      const formData = this.extractFormData(control);
+      formarradtaa.push(formData);
+    });
+	
+	  private extractFormData(control: AbstractControl): any {
+    return {
+      firstname: control.get('firstname')?.value,
+      lastname: control.get('lastname')?.value,
+      gender: control.get('gender')?.value,
+      checkboxYes: control.get('yes')?.value,
+      checkboxNo: control.get('no')?.value,
+    };
+  }
+  
+  here the data is pushed as per the loop 
+  
+  
+  step 3 get and patch 
+  
+  
+    patchValue() {
+    // Iterate over each object in getdata
+    this.getdata.forEach((data, index) => {
+      // Get the specific FormGroup from the FormArray by index
+      const formGroup = this.userDetails.at(index) as FormGroup;
+
+      // Patch values into the FormGroup
+      formGroup.patchValue({
+        firstname: data.firstname,
+        lastname: data.lastname,
+        gender: data.gender,
+        yes: data.checkboxYes,
+        no: data.checkboxNo,
+      });
+    });
+  }
+
+
+```

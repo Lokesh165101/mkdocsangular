@@ -42,24 +42,22 @@ here we cna see that in that ouput only the values will appear when we inspect t
  
 # ng contant 
 
-Here the ng contant is used parent and child communicaton 
-
-when we insert the data in the selector from parent  it is going the show the same data in the child 
-```<ngcontent> here the data is going to show  </ngcontent>```
+here ngcontenet 
 
 ```
-parent html
-<app-child>
-here is the data 
-</app-child>
-
-child
-
-<div> hello this is the child html </div>
-<ng-conant> 
-(here the data will come from the parent a display here )
-</ng-conant
+<app-child>ll;lk;lk;k;</app-child>
 ```
+
+the data is wrote in the app.html  i want to show the dat in the child html view 
+
+so in that child.html
+```
+<p>child works!</p>
+<ng-content></ng-content>
+```
+
+Here i wrote that data in the parent html in the child  slector  the data will show in the child 
+
 
 here the any data given in the selector that will be diplsayed in the ng-contant in the child 
 
