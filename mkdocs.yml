@@ -23,7 +23,7 @@ nav:
     - Singals : Singals.md
     - BehaviourSubject : BehaviourSubject.md
     - Localstorage : Localstorage.md
-    - NGXS_Store : NGXS_store.md
+    - NGXSStore : NGXSStore.md
     - Services : Services.md
     - AppConfig : appConfig.md
     - Routes : Routes.md
